@@ -125,6 +125,20 @@
       bar.style.backgroundColor = '#FF0000';
     }
   });
+  if (rtp < 70) {
+  bar.style.backgroundColor = '#FF0000'; // vermelho
+  bar.style.color = '#fff'; // texto branco
+} else if (rtp < 80) {
+  bar.style.backgroundColor = '#FFA500'; // laranja
+  bar.style.color = '#000'; // texto preto
+} else if (rtp < 90) {
+  bar.style.backgroundColor = '#FFFF00'; // amarelo
+  bar.style.color = '#000'; // texto preto
+} else {
+  bar.style.backgroundColor = '#00FF00'; // verde
+  bar.style.color = '#000'; // texto preto
+}
+
 </script>
 
 </body>
