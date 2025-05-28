@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sala de Sinais PG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>B</h1>
+  </header>
+  <main class="slots-container">
+    <div class="slot">
+      <img src="assets/fortune-tiger.png" alt="Fortune Tiger">
+      <div class="rtp-bar" data-rtp="97"></div>
+    </div>
+    <div class="slot">
+      <img src="assets/fortune-ox.png" alt="Fortune Ox">
+      <div class="rtp-bar" data-rtp="94"></div>
+    </div>
+    <div class="slot">
+      <img src="assets/fortune-rabbit.png" alt="Fortune Rabbit">
+      <div class="rtp-bar" data-rtp="92"></div>
+    </div>
+    <div class="slot">
+      <img src="assets/fortune-mouse.png" alt="Fortune Mouse">
+      <div class="rtp-bar" data-rtp="89"></div>
+    </div>
+    <div class="slot">
+      <img src="assets/fortune-snake.png" alt="Fortune Snake">
+      <div class="rtp-bar" data-rtp="95"></div>
+    </div>
+    <div class="slot">
+      <img src="assets/fortune-dragon.png" alt="Fortune Dragon">
+      <div class="rtp-bar" data-rtp="98"></div>
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll('.rtp-bar').forEach(bar => {
+      const rtp = parseFloat(bar.dataset.rtp);
+      const width = Math.min(rtp, 100);
+      bar.style.width = `${width}%`;
+
+      if (rtp >= 96) {
+        bar.style.backgroundColor = '#00FF00';
+      } else if (rtp >= 93) {
+        bar.style.backgroundColor = '#FFA500';
+      } else {
+        bar.style.backgroundColor = '#FF0000';
+      }
+    });
+  </script>
+</body>
+</html>
